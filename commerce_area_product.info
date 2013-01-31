@@ -1,0 +1,4 @@
+name = Commerce Area Products
+description = This module let the ability to calulate the product price before adding to cart related to area of product
+core = 7.x
+files[] = commerce_area_product.module

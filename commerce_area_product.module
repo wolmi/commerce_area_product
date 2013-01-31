@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * Implements hook_menu()
+ */
+function commerce_area_product_menu(){
+
+}
+
+
+/**
+ * Implements hook_node_view()
+ */
+function commerce_area_product_node_view($node){
+
+}
