@@ -4,13 +4,28 @@
  * Implements hook_menu()
  */
 function commerce_area_product_menu(){
-
+	$items = array();
+	$items['commerce-area-product/%/%'] = array(
+		'page callback' => 'commerce_area_product_calc',
+		'page arguments' => array(1, 2),
+		'type' => MENU_CALLBACK,
+	);
+	return $items;
 }
 
 
 /**
  * Implements hook_node_view()
  */
-function commerce_area_product_node_view($node){
+function commerce_area_product_node_view($node, $view_mode, $langcode){
+	if($node->type == <aqui ponemos el que nos interese>){
+		drupal_add_js(drupal_get_path('module', 'commerce_area_product').'/js/commerce_area_product.js');
+	}
+}
 
+/**
+ * Implements the logic of price calculating
+ */
+function commerce_area_product_calc($width, $height){
+	return json_encode(array('price', '200€'));
 }
